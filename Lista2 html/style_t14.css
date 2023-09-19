@@ -1,0 +1,24 @@
+html *{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-container > div{
+    background-color: grey;
+    padding: 10px;
+}
+
+.flex-container div:nth-of-type(odd){
+    font-weight: bold;
+}
+
+.flex-container div:nth-of-type(even){
+    text-decoration: underline;
+}

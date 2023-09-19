@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zad5</title>
+</head>
+<script>
+    function AJAXGeneruj() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      obj = JSON.parse(this.responseText)
+      console.log(obj)
+      let AJAXtabela = "<table border='1'><th>productCode</th><th>productName</th><th>productLine</th><th>MSRP</th><th>buyPrice</th><th>htmlDescription</th><th>image</th><th>productDescription</th><th>productVendor</th><th>quantityInStock</th><th>textDescription</th>"
+      for (let x in obj) {
+        AJAXtabela += "<tr><td>" + obj[x].productCode + "</td>";
+        AJAXtabela += "<td>" + obj[x].productName + "</td>";
+        AJAXtabela += "<td>" + obj[x].productLine + "</td>";
+        AJAXtabela += "<td>" + obj[x].MSRP + "</td>";
+        AJAXtabela += "<td>" + obj[x].buyPrice + "</td>";
+        AJAXtabela += "<td>" + obj[x].htmlDescription + "</td>";
+        AJAXtabela += "<td>" + obj[x].image + "</td>";
+        AJAXtabela += "<td>" + obj[x].productDescription + "</td>";
+        AJAXtabela += "<td>" + obj[x].productVendor + "</td>";
+        AJAXtabela += "<td>" + obj[x].quantityInStock + "</td>";
+
+        AJAXtabela += "<td>" + obj[x].textDescription + "</td></tr>";
+      }
+      AJAXtabela += "</table>"
+      document.getElementById("tabelaAJAX").innerHTML = AJAXtabela;
+      }
+    //PO PHP DAĆ ZNAK ZAPYTANIA I TAM ZAPYTANIE SQL
+    xhttp.open("GET", "zad4.php", true);
+    xhttp.send();
+}
+</script>
+<body>
+    <input name="email" placeholder="Szukaj">
+    <div id="tabelaAJAX">
+    </div>
+    <button onclick="AJAXGeneruj()">Załaduj dane</button>
+</body>
+
+
+</html>

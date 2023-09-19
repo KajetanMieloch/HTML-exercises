@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="wynik">Wynik będzie tutaj</p>
+    <button onclick="zad11()" >zad 1 podpunkt 1</button>
+    <input id="a">
+    <input id="b">
+    <input id="c">
+    <button onclick="zad12(a.value,b.value)" >zad 1 podpunkt 2</button>
+    <button onclick="zad13()" >zad 1 podpunkt 3</button>
+    <br/>
+    <button onclick="zad21()" >zad 2 podpunkt 1</button>
+    <button onclick="zad22()" >zad 2 podpunkt 2</button>
+    <button onclick="zad23()" >zad 2 podpunkt 3</button>
+    <br/>
+    <button onclick="zad31()" >zad 3 podpunkt 1</button>
+    <button onclick="zad32()" >zad 3 podpunkt 2</button>
+    <button onclick="zad33()" >zad 3 podpunkt 3</button>
+    <br/>
+    <button onclick="zad41()" >zad 4 podpunkt 1</button>
+    <button onclick="zad42()" >zad 4 podpunkt 2</button>
+    <br/>
+    <button onclick="zad51()" >zad 3 podpunkt 1</button>
+    <button onclick="zad52()" >zad 3 podpunkt 2</button>
+    <button onclick="zad53()" >zad 3 podpunkt 3</button>
+
+    <script>
+        let liczba1 = 5
+        let liczba2 = 7
+        let licznik = 0
+        let liczna3
+        let liczba4
+        const zad11 = () =>{
+            console.log(liczba1+liczba2)
+            wynik.innerHTML = liczba1+liczba2
+        }
+        const zad12 = (x,y) =>{
+            console.log(-(-x)-(-y))
+            c.value = -(-x)-(-y)
+        }
+        const zad13 = () =>{
+            console.log(licznik += 1)
+            wynik.innerHTML = licznik
+        }
+
+        let tab1Zad2 = ['Quick', 'brown', 'fox', 'jumps', 'over',
+'the', 'lazy', 'dog']
+        let tab2Zad2 = ['Plum', 'Orange', 'Apple', 'Gooseberry',
+'Pear', 'Pineapple']
+
+        let stringZad2 = '0,1,1,2,3,5,8,13,21'
+
+        const zad21 = () =>{
+            console.log(tab1Zad2.join(), tab1Zad2.length)
+            wynik.innerHTML = tab1Zad2.join(), tab1Zad2.length
+        }
+        const zad22 = () =>{
+            console.log(tab2Zad2.sort())
+            wynik.innerHTML = tab2Zad2.sort()
+            delete tab2Zad2[0]
+            delete tab2Zad2[2]
+            console.log(tab2Zad2)
+        }
+
+        const zad23 = () =>{
+            let string = '0,1,1,2,3,5,8,13,12'
+            let arr = string.split(',').map(Number)
+            let wyn = arr.reduce((partialSum, a) => partialSum + a, 0)
+            wynik.innerHTML = wyn
+            console.log(wyn)
+        }
+
+        const zad31 = () =>{
+            const student = {imie:"Kajetan", nazwisko:"Mieloch", wiek:"20", kierunek:"Północny-Wschód"};
+            let wyn = JSON.stringify(student)
+            wynik.innerHTML = wyn
+            console.log(wyn)
+        }
+
+        let library = [
+        {
+            author: 'Bill Gates',
+            title: 'The Road Ahead',
+            readingStatus: true
+        },
+        {
+            author: 'Steve Jobs',
+            title: 'Walter Isaacson',
+            readingStatus: true
+        },
+        {
+            author: 'Suzanne Collins',
+            title: 'Mockingjay: The Final Book of The Hunger Games',
+            readingStatus: false
+            }];
+
+        const zad32 = () =>{
+
+            let sortedLib = library.sort((a, b) => {
+            if (a.title < b.title) {
+                return -1
+            }
+            if (a.title > b.title) {
+                return 1
+            }
+            return 0
+            })
+
+            wynik.innerHTML = "Prosze zobaczyć konsole"
+            console.log(sortedLib)
+        }
+    
+        const zad33 = () =>{
+
+            let wyn = library.filter(a => a.readingStatus == true);
+
+            wynik.innerHTML = "Prosze zobaczyć konsole"
+            console.log(wyn)
+        }
+
+        let tab = [1,19,31,76,91,102]
+
+        const zad41 = () =>{
+
+            const sum = (a,b,c,d,e,f) =>{
+                return a+b+c+d+e+f
+            }
+
+            wynik.innerHTML = (sum(...tab))
+            console.log(sum(...tab))
+        }
+
+        const zad42 = () =>{
+
+            const [a1,b2,...c3] = tab
+            wynik.innerHTML = a1 + "," + b2 + "," + c3
+            console.log(a1,b2,c3)
+
+        }
+
+        const zad51 = () =>{
+            let numbers = [100,90,80,7]
+            wynik.innerHTML = Math.min(...numbers)
+            console.log(Math.min(...numbers))
+        }
+        
+        const zad52 = () =>{
+            let wyn =[]
+            let numbers = [98.08,100.2,9.3213,4.01]
+            numbers.forEach(number => {
+                wyn.push(Math.floor(number))
+            });
+            console.log(wyn)
+            wynik.innerHTML = wyn
+        }
+
+        const zad53 = () =>{
+            let wyn = []
+            for (let i = 0; i < 10; i++) {
+                wyn.push(Math.random())                
+            }
+            console.log(wyn)
+            wynik.innerHTML = wyn
+        }
+
+
+
+        
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+zad 3 
+a) SELECT * FROM Customers;
+b) SELECT officeCod, country FROM offices;
+
+zad 4
+a) SELECT * FROM customers WHERE country = "USA"; (poprawione z city)
+b) SELECT orderNumber, orderDate, comments FROM orders WHERE orderDate BETWEEN '2003-01-01' AND '2004-01-01';
+c) SELECT * FROM products WHERE productVendor LIKE 'S%';
+zad 5
+a) SELECT * FROM orders INNER JOIN orderdetails ON orders.orderNumber=orderdetails.orderNumber;
+b) 

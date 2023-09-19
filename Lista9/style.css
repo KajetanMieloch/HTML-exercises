@@ -1,0 +1,123 @@
+body{
+    background-color: #D8E1FF !important;
+    font-family: 'Open Sans', sans-serif !important;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.imageMain{
+    width: 100%;
+    height: auto;
+    height: 80vh;
+    z-index: 0;
+    filter: blur(3px);
+    position: absolute;
+    top: 0%;
+}
+
+.navbar{
+    background-color: #96CDFF;
+    z-index: 2;
+}
+
+.imageMainContainer{
+
+}
+
+.blackRec{
+    background-color: black;
+    width: 100%;
+    opacity: 70%;
+    filter: blur(3px);
+    height: 74vh;
+    position: relative;
+    z-index: 1;
+    transition: all 1s;
+}
+
+.blackRec:hover{
+    opacity: 0%;
+}
+
+.mainContainerText{
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 40%;
+    color: #BE92A2;
+}
+
+.mainContainerText p{
+    text-align: center;
+}
+
+.crateLineC{
+    background-color: #DBBADD;
+    width: 100%;
+    height: 15vh;
+    z-index: 1;
+}
+
+.Create p{
+    position: relative;
+    left: 43%;
+    transform: translateY(-190%);
+    z-index: 2;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.crateLineS{
+    background-color: #69DDFF;
+    width: 100%;
+    height: 15vh;
+    z-index: 1;
+    position: absolute;
+}
+
+.Share p{
+    position: relative;
+    left: 39.5%;
+    transform: translateY(40%);
+    z-index: 2;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.crateLineB{
+    background-color: #96CDFF;
+    width: 100%;
+    height: 15vh;
+    z-index: 1;
+    position: absolute;
+}
+
+.Buy p{
+    position: relative;
+    left: 43%;
+    transform: translateY(40%);
+    z-index: 2;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.formT{
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+.btn-T{
+    background-color: #DBBADD !important;
+}
+
+#lista{
+    width: 50%;
+    border: 2px solid black;
+    margin-left: 25%;
+    margin-bottom: 6%;
+    margin-top: 6%;
+}

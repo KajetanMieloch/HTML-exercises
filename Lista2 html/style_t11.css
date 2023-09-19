@@ -1,0 +1,10 @@
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.flex-container > div{
+    background-color: grey;
+    padding: 10px;
+}

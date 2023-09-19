@@ -1,0 +1,46 @@
+html *{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-container > div{
+    background-color: grey;
+    padding: 10px;
+}
+
+.flex-container div:nth-of-type(odd){
+    font-weight: bold;
+}
+
+.flex-container div:nth-of-type(even){
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .flex-container {
+    flex-direction: column;
+    }
+    body{
+        background-color: gray;
+        overflow-x: auto;
+    }
+    html *{
+        font-size: 8px;
+    }
+}
+
+@media (min-width: 1140px) {
+    body{
+        background-color: rgb(70, 134, 172);
+        overflow-x: hidden;
+    }
+    html *{
+        font-size: 20px;
+    }
+}
